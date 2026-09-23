@@ -6,8 +6,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Iury Lopes | Desenvolvedor Full-Stack" },
-      { name: "description", content: "Portfólio de Iury Silva, desenvolvedor Full-Stack especialista em Java, Spring Boot, Angular e sistemas corporativos." },
-      { property: "og:title", content: "Iury Silva | Desenvolvedor Full-Stack" },
+      { name: "description", content: "Portfólio de Iury Lopes, desenvolvedor Full-Stack especialista em Java, Spring Boot, Angular e sistemas corporativos." },
+      { property: "og:title", content: "Iury Lopes | Desenvolvedor Full-Stack" },
       { property: "og:description", content: "Sistemas completos, estáveis e preparados para evoluir." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
