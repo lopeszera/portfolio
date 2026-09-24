@@ -219,85 +219,198 @@ export function Portfolio() {
         </div>
       </div>
 
-      <div className="relative min-h-[600px] overflow-visible lg:min-h-[720px]">
+     {/* =========================================================
+         DIREITA — 3D + INFORMAÇÕES
+         ========================================================= */}
+     <div className="relative mt-10 min-h-0 overflow-visible lg:mt-0 lg:min-h-[720px]">
 
-        <div
-          className="
-            absolute
-            inset-y-0
-            left-[-8%]
-            right-[18%]
-            z-10
-            overflow-visible
-            lg:left-[-12%]
-            lg:right-[22%]
-          "
-        >
-          <div className="absolute inset-[12%_8%_8%] rounded-full bg-accent blur-3xl" />
+       {/* =======================================================
+           PERSONAGEM 3D
+           MOBILE: ocupa uma área própria
+           DESKTOP: posicionamento lateral
+           ======================================================= */}
+       <div
+         className="
+           relative
+           h-[500px]
+           w-full
+           overflow-visible
 
-          <div className="relative h-full w-full overflow-visible">
-            <DeveloperScene />
-          </div>
-        </div>
+           sm:h-[580px]
 
-        <div
-          className="
-            absolute
-            right-0
-            top-1/2
-            z-30
-            w-[38%]
-            -translate-y-1/2
-            lg:right-[-1%]
-            lg:w-[36%]
-          "
-        >
+           lg:absolute
+           lg:inset-y-0
+           lg:left-[-12%]
+           lg:right-[22%]
+           lg:h-auto
+         "
+       >
 
-          <p className="font-mono text-[10px] font-bold uppercase tracking-wide text-primary sm:text-xs">
-            Full-Stack&nbsp; · &nbsp;Produto&nbsp; · &nbsp;Web
-          </p>
+         {/* Glow */}
+         <div
+           className="
+             absolute
+             inset-[10%_5%_5%]
+             rounded-full
+             bg-accent
+             blur-3xl
+             opacity-70
+           "
+         />
 
-          <h2 className="mt-3 font-display text-3xl font-extrabold uppercase leading-[0.9] tracking-[-0.04em] sm:text-4xl lg:text-5xl">
-            <span className="text-gradient">
-              Software
-            </span>
+         {/* 3D */}
+         <div className="relative h-full w-full overflow-visible">
+           <DeveloperScene />
+         </div>
 
-            <br />
+       </div>
 
-            <span className="text-outline">
-              Developer
-            </span>
-          </h2>
 
-          {/* =====================================================
-              ESTATÍSTICAS
-              ===================================================== */}
-          <div className="mt-8 grid grid-cols-2 border-t border-border pt-4">
+       {/* =======================================================
+           INFORMAÇÕES
+           MOBILE: fluxo normal, abaixo do personagem
+           DESKTOP: posicionamento absoluto à direita
+           ======================================================= */}
+       <div
+         className="
+           relative
+           z-30
+           mt-2
+           w-full
+           px-2
 
-            <div className="border-r border-border pr-4">
-              <strong className="block font-display text-4xl font-extrabold leading-none text-primary lg:text-5xl">
-                3+
-              </strong>
+           lg:absolute
+           lg:right-[-1%]
+           lg:top-1/2
+           lg:mt-0
+           lg:w-[36%]
+           lg:-translate-y-1/2
+           lg:px-0
+         "
+       >
 
-              <span className="mt-2 block max-w-[105px] font-mono text-[9px] font-bold uppercase leading-4 text-muted-foreground lg:text-[10px]">
-                Anos em desenvolvimento
-              </span>
-            </div>
+         {/* Label */}
+         <p className="font-mono text-[10px] font-bold uppercase tracking-wide text-primary sm:text-xs">
+           Full-Stack&nbsp; · &nbsp;Produto&nbsp; · &nbsp;Web
+         </p>
 
-            <div className="pl-4">
-              <strong className="block font-display text-4xl font-extrabold leading-none text-primary lg:text-5xl">
-                5+
-              </strong>
 
-              <span className="mt-2 block max-w-[105px] font-mono text-[9px] font-bold uppercase leading-4 text-muted-foreground lg:text-[10px]">
-                Anos em tecnologia
-              </span>
-            </div>
+         {/* Título */}
+         <h2
+           className="
+             mt-3
+             font-display
+             text-3xl
+             font-extrabold
+             uppercase
+             leading-[0.9]
+             tracking-[-0.04em]
 
-          </div>
+             sm:text-4xl
 
-        </div>
-      </div>
+             lg:text-5xl
+           "
+         >
+           <span className="text-gradient">
+             Software
+           </span>
+
+           <br />
+
+           <span className="text-outline">
+             Developer
+           </span>
+         </h2>
+
+
+         {/* =====================================================
+             ESTATÍSTICAS
+             ===================================================== */}
+         <div
+           className="
+             mt-8
+             grid
+             grid-cols-2
+             border-t
+             border-border
+             pt-4
+           "
+         >
+
+           {/* 3+ */}
+           <div className="border-r border-border pr-4">
+             <strong
+               className="
+                 block
+                 font-display
+                 text-4xl
+                 font-extrabold
+                 leading-none
+                 text-primary
+                 lg:text-5xl
+               "
+             >
+               3+
+             </strong>
+
+             <span
+               className="
+                 mt-2
+                 block
+                 max-w-[105px]
+                 font-mono
+                 text-[9px]
+                 font-bold
+                 uppercase
+                 leading-4
+                 text-muted-foreground
+                 lg:text-[10px]
+               "
+             >
+               Anos em desenvolvimento
+             </span>
+           </div>
+
+
+           {/* 5+ */}
+           <div className="pl-4">
+             <strong
+               className="
+                 block
+                 font-display
+                 text-4xl
+                 font-extrabold
+                 leading-none
+                 text-primary
+                 lg:text-5xl
+               "
+             >
+               5+
+             </strong>
+
+             <span
+               className="
+                 mt-2
+                 block
+                 max-w-[105px]
+                 font-mono
+                 text-[9px]
+                 font-bold
+                 uppercase
+                 leading-4
+                 text-muted-foreground
+                 lg:text-[10px]
+               "
+             >
+               Anos em tecnologia
+             </span>
+           </div>
+
+         </div>
+
+       </div>
+
+     </div>
     </section>
 
       <div className="border-y border-border bg-card py-4">
