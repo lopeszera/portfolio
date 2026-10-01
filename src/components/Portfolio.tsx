@@ -34,7 +34,7 @@ const projects = [
     number: "01",
           title: "Confirmação de Presença Digital",
           text: "Aplicação Web para confirmar presença de clientes convocados de treinamentos específicos através de um QRCode.",
-          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · ANGULAR · MICROSSERVIÇOS · DOCKER · JUNIT",
+          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · REACT · MICROSSERVIÇOS · DOCKER · JUNIT",
   },
   {
     number: "02",
