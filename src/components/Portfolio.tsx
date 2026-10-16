@@ -26,7 +26,7 @@ import { DeveloperScene } from "./DeveloperScene";
 import { Button } from "@/components/ui/button";
 
 const skills = [
-  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "Angular", "JavaScript", "PostgreSQL", "Docker", "Kubernetes", "Kafka", "RabbitMQ", "AWS", "GCP",
+  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "JavaScript", "TypeScript", "Angular", "PostgreSQL", "Docker", "Kubernetes", "Inteligência Artifical", "Kafka", "RabbitMQ", "AWS", "GCP",
 ];
 
 type Project = {
@@ -462,8 +462,8 @@ export function Portfolio() {
         <div>
           <h2 className="font-display max-w-5xl text-3xl font-bold leading-tight tracking-normal md:text-6xl">Analista Desenvolvedor de Software com visão do todo — da regra de negócio ao deploy.</h2>
           <div className="mt-10 grid gap-8 text-muted-foreground md:grid-cols-2">
-            <p className="leading-relaxed">Sou profissional de TI com mais de 5 anos de experiência, sendo cerca de 3 anos atuando diretamente no desenvolvimento, evolução e sustentação de sistemas corporativos, com foco em soluções Full-Stack e na transformação de regras de negócio em aplicações estáveis e escaláveis. Atualmente curso Análise e Desenvolvimento de Sistema pela FIAP.</p>
-            <p className="leading-relaxed">Atuo principalmente com Java e Spring no backend, além de Angular e JavaScript no frontend, desenvolvendo APIs RESTful, microsserviços e integrações. Também tenho experiência com sistemas legados, testes automatizados, Docker, mensageria e CI/CD, sempre buscando equilibrar evolução técnica, qualidade de código e estabilidade das soluções.</p>
+            <p className="leading-relaxed">Sou profissional de TI com 6 anos de experiência, sendo mais de 3 anos atuando diretamente no desenvolvimento, evolução e sustentação de sistemas corporativos, com foco em soluções Full-Stack e na transformação de regras de negócio em aplicações estáveis e escaláveis. Tenho perfil orientado à análise e resolução de problemas complexos, desenvolvimento de soluções completas e aprendizado contínuo. Atualmente curso Análise e Desenvolvimento de Sistema pela FIAP.</p>
+            <p className="leading-relaxed">Atuo principalmente com Java e Spring no backend, além de React com JavaScript, TypeScript e Angular no frontend, desenvolvendo APIs RESTful, microsserviços e integrações. Também tenho experiência com sistemas legados, testes automatizados, Docker, mensageria e CI/CD, utilização de IA aplicada no desenvolvimento de software, sempre buscando equilibrar evolução técnica, qualidade de código e estabilidade das soluções.</p>
           </div>
         </div>
           </section>
@@ -556,7 +556,7 @@ export function Portfolio() {
           <p className="section-label">EXPERIÊNCIA</p>
           <div className="mt-12 divide-y divide-border border-t border-border">
             {[
-              ["2023 — PRESENTE", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · Angular · Microsserviços · CI/CD"],
+              ["2023 — PRESENTE", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · Angular · Microsserviços · CI/CD · IA ·"],
               ["2023", "Analista de Suporte", "Alcafoods Ltda", "Windows · Linux · Active Directory · Infraestrutura"],
               ["2020 — 2023", "Assistente de T.I.", "Alcafoods Ltda", "Suporte · Redes · Equipamentos · CFTV"],
             ].map(([date, role, company, tech]) => (
