@@ -29,43 +29,80 @@ const skills = [
   "Java", "Spring Boot", "Solid", "Design Patterns", "React", "Angular", "JavaScript", "PostgreSQL", "Docker", "Kubernetes", "Kafka", "RabbitMQ", "AWS", "GCP",
 ];
 
-const projects = [
+type Project = {
+  number: string;
+  title: string;
+  text: string;
+  stack: string;
+  slug?: string;
+  document?: string;
+};
+
+const projects: Project[] = [
+
   {
-    number: "01",
+        number: "01",
+        title: "Cardápio Digital & Painel de Controle de Solicitações",
+        text: "Sistema Full-Stack para exibição do cardápio corporativo semanal, informações nutricionais e alergênicas e gestão de solicitações em painel administrativo.",
+        stack: "JAVA 21 · SPRING BOOT · SPRING DATA JPA · POSTGRESQL · REACT · TYPESCRIPT · TAILWIND CSS · REST APIs",
+        slug: "cardapio-digital",
+        document: "/documents/cardapio-digital.pdf",
+      },
+
+  {
+        number: "02",
+        title: "Sistema de Aprovação de Solicitações de Alterações e Pedidos Parciais",
+        text: "Sistema web para validação de solicitações por tipo, com regras de negócio específicas e processamento de ajustes financeiros em itens e pedidos.",
+        stack: "JAVA 8 · SPRING BOOT · MICROSSERVIÇOS · JAVASCRIPT · POSTGRESQL · TAILWIND CSS · REST APIs · SOLID",
+        slug: "aprovacao-solicitacoes",
+        document: "/documents/aprovacao-solicitacao-alteracao.pdf",
+      },
+  {
+    number: "03",
           title: "Confirmação de Presença Digital",
           text: "Aplicação Web para confirmar presença de clientes convocados de treinamentos específicos através de um QRCode.",
           stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · REACT · MICROSSERVIÇOS · DOCKER · JUNIT",
+          document: "/documents/confirmacao-presenca.pdf",
   },
+
   {
-    number: "02",
+        number: "04",
+        title: "Meu Portfólio",
+        text: "Portfólio pessoal interativo desenvolvido do zero, com foco em usabilidade, animações fluidas e apresentação de projetos.",
+        stack: "TYPESCRIPT · JAVASCRIPT · REACT · VITE · TAILWIND CSS · THREE.JS · GIT · GITHUB · VERCEL",
+        slug: "meu-portfolio-v1",
+        document: "/documents/portfolio.pdf",
+      },
+    {
+    number: "05",
+        title: "Sistema de Avaliação de Treinamentos",
+        text: "Aplicação back-end para gestão e avaliação de treinamentos corporativos.",
+        stack: "GO · POSTGRESQL · DOCKER · CI/CD",
+        },
+    {
+          number: "06",
+          title: "Controle de Estoque Entrada x Saída",
+          text: "Desenvolvido para controlar entradas de produtos alimentícios em estoque, e a saída do mesmo para uma carga específica.",
+          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · CI/CD · MICROSSERVIÇOS · DOCKER · JUNIT",
+        },
+    {
+          number: "07",
+          title: "Aprovações Diretoria",
+          text: "Sistema desenvolvimento para diretores aprovarem solicitações de alterações de valores, parcelas, fornecedores de pedidos de compra.",
+          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · JAVASCRIPT · MICROSSERVIÇOS · DOCKER · JUNIT",
+        },
+{
+    number: "08",
     title: "Contratação de Carga",
     text: "Microsserviços robustos para contratação logística, com arquitetura limpa e cobertura de testes.",
     stack: "JAVA 17 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · SOLID · JUNIT ",
   },
   {
-    number: "03",
+    number: "09",
     title: "Custo de Frota",
     text: "Solução back-end para gestão de custos operacionais e manutenção de frotas.",
     stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · MICROSSERVIÇOS · DESIGN PATTERNS · JUNIT",
   },
-  {
-      number: "04",
-      title: "Aprovações Diretoria",
-      text: "Sistema desenvolvimento para diretores aprovarem solicitações de alterações de valores, parcelas, fornecedores de pedidos de compra.",
-      stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · JAVASCRIPT · MICROSSERVIÇOS · DOCKER · JUNIT",
-    },
-{
-number: "05",
-    title: "Sistema de Avaliação de Treinamentos",
-    text: "Aplicação back-end para gestão e avaliação de treinamentos corporativos.",
-    stack: "GO · POSTGRESQL · DOCKER · CI/CD",
-    },
-{
-      number: "06",
-      title: "Controle de Estoque Entrada x Saída",
-      text: "Desenvolvido para controlar entradas de produtos alimentícios em estoque, e a saída do mesmo para uma carga específica.",
-      stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · CI/CD · MICROSSERVIÇOS · DOCKER · JUNIT",
-    },
 ];
 
 const services = [
@@ -533,19 +570,64 @@ export function Portfolio() {
         </div>
       </section>
 
-      <section id="projetos" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-36">
-        <div className="flex items-end justify-between"><div><p className="section-label">PROJETOS</p><h2 className="mt-4 font-display text-4xl font-bold md:text-7xl">Destaques</h2></div><ArrowDownRight className="hidden size-12 text-primary md:block" /></div>
-        <div className="mt-14 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
-          {projects.map((project) => (
-            <article key={project.number} className="group flex min-h-80 flex-col bg-background p-7 transition-colors hover:bg-accent">
-              <span className="font-mono text-xs text-primary">{project.number}</span>
-              <div className="mt-auto"><p className="mb-4 text-xs font-bold text-muted-foreground">{project.stack}</p><h3 className="font-display text-2xl font-bold leading-tight">{project.title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{project.text}</p></div>
-            </article>
-          ))}
-        </div>
-      </section>
+     <section
+       id="projetos"
+       className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-36"
+     >
+       <div className="flex items-end justify-between">
+         <div>
+           <p className="section-label">PROJETOS</p>
+           <h2 className="mt-4 font-display text-4xl font-bold md:text-7xl">
+             Destaques
+           </h2>
+         </div>
 
+         <ArrowDownRight className="hidden size-12 text-primary md:block" />
+       </div>
 
+       <div className="mt-14 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
+         {projects.map((project) => (
+           <article
+             key={project.number}
+             className="group flex min-h-80 flex-col bg-background p-7 transition-colors hover:bg-accent"
+           >
+             <span className="font-mono text-xs text-primary">
+               {project.number}
+             </span>
+
+             <div className="mt-auto">
+               <p className="mb-4 text-xs font-bold text-muted-foreground">
+                 {project.stack}
+               </p>
+
+               <h3 className="font-display text-2xl font-bold leading-tight">
+                 {project.title}
+               </h3>
+
+               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                 {project.text}
+               </p>
+             </div>
+
+             {project.document && (
+               <div className="mt-6">
+                 <Button asChild variant="outline" size="sm">
+                   <a
+                     href={project.document}
+                     target="_blank"
+                     rel="noreferrer"
+                   >
+                     <FileText className="mr-2 size-4" />
+                     Ver documentação
+                     <ArrowUpRight className="ml-2 size-4" />
+                   </a>
+                 </Button>
+               </div>
+             )}
+           </article>
+         ))}
+       </div>
+     </section>
 
       <section className="bg-gradient-primary text-primary-foreground">
         <div className="mx-auto max-w-[1440px] px-5 py-20 md:px-10 md:py-28">
