@@ -26,7 +26,7 @@ import { DeveloperScene } from "./DeveloperScene";
 import { Button } from "@/components/ui/button";
 
 const skills = [
-  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "JavaScript", "TypeScript", "Angular", "PostgreSQL", "Docker", "Kubernetes", "Inteligência Artifical", "Kafka", "RabbitMQ", "AWS", "GCP",
+  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "JavaScript", "TypeScript", "Angular", "PostgreSQL", "Docker", "Kubernetes", "Inteligência Artificial", "Kafka", "RabbitMQ", "AWS", "GCP",
 ];
 
 type Project = {
