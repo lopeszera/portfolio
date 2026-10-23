@@ -119,7 +119,7 @@ const services = [
   {
     icon: Code2,
     title: "Frontend",
-    text: "Interfaces com JavaScript, HTML, CSS e Angular 15+, integradas às APIs e serviços de back-end.",
+    text: "Interfaces com React, TypeScript, JavaScript e Angular 15+, integradas às APIs e serviços de back-end.",
   },
   {
     icon: FlaskConical,
@@ -151,7 +151,7 @@ const services = [
 const technologies = [
   { name: "Java", detail: "Backend", icon: Coffee },
   { name: "Spring", detail: "APIs & serviços", icon: ServerCog },
-  { name: "Angular", detail: "Frontend", icon: Code2 },
+  { name: "React", detail: "Frontend", icon: Code2 },
   { name: "PostgreSQL", detail: "Dados", icon: Database },
   { name: "Docker", detail: "Containers", icon: Container },
   { name: "Kubernetes", detail: "Orquestração", icon: Boxes },
@@ -409,7 +409,7 @@ export function Portfolio() {
            </div>
 
 
-           {/* 5+ */}
+           {/* 6+ */}
            <div className="pl-4">
              <strong
                className="
@@ -422,7 +422,7 @@ export function Portfolio() {
                  lg:text-5xl
                "
              >
-               5+
+               6+
              </strong>
 
              <span
@@ -556,7 +556,7 @@ export function Portfolio() {
           <p className="section-label">EXPERIÊNCIA</p>
           <div className="mt-12 divide-y divide-border border-t border-border">
             {[
-              ["2023 — PRESENTE", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · Angular · Microsserviços · CI/CD · IA ·"],
+              ["2023 — PRESENTE", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
               ["2023", "Analista de Suporte", "Alcafoods Ltda", "Windows · Linux · Active Directory · Infraestrutura"],
               ["2020 — 2023", "Assistente de T.I.", "Alcafoods Ltda", "Suporte · Redes · Equipamentos · CFTV"],
             ].map(([date, role, company, tech]) => (
