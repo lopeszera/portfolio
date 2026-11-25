@@ -1,8 +1,10 @@
 import {
   ArrowDownRight,
   ArrowUpRight,
+  Bot,
   Boxes,
   Braces,
+  ChartNoAxesGantt,
   Coffee,
   Cloud,
   Code2,
@@ -26,7 +28,7 @@ import { DeveloperScene } from "./DeveloperScene";
 import { Button } from "@/components/ui/button";
 
 const skills = [
-  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "JavaScript", "TypeScript", "Angular", "PostgreSQL", "Docker", "Kubernetes", "Inteligência Artificial", "Kafka", "RabbitMQ", "AWS", "GCP",
+  "Java", "Spring Boot", "Solid", "Design Patterns", "React", "TypeScript", "JavaScript", "PostgreSQL", "Docker", "Inteligência Artificial", "Spec Driven Development", "Kafka", "AWS",
 ];
 
 type Project = {
@@ -74,34 +76,19 @@ const projects: Project[] = [
         document: "/documents/portfolio.pdf",
       },
     {
-    number: "05",
-        title: "Sistema de Avaliação de Treinamentos",
-        text: "Aplicação back-end para gestão e avaliação de treinamentos corporativos.",
-        stack: "GO · POSTGRESQL · DOCKER · CI/CD",
-        },
-    {
-          number: "06",
-          title: "Controle de Estoque Entrada x Saída",
-          text: "Desenvolvido para controlar entradas de produtos alimentícios em estoque, e a saída do mesmo para uma carga específica.",
-          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · CI/CD · MICROSSERVIÇOS · DOCKER · JUNIT",
-        },
-    {
-          number: "07",
-          title: "Aprovações Diretoria",
-          text: "Sistema desenvolvimento para diretores aprovarem solicitações de alterações de valores, parcelas, fornecedores de pedidos de compra.",
-          stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · JAVASCRIPT · MICROSSERVIÇOS · DOCKER · JUNIT",
-        },
-{
-    number: "08",
+        number: "05",
+        title: "Controle de Estoque Entrada x Saída",
+        text: "Desenvolvido para controlar entradas de produtos alimentícios em estoque, e a saída do mesmo para uma carga específica.",
+        stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · CI/CD · MICROSSERVIÇOS · DOCKER · JUNIT",
+        document: "/documents/controle-estoque-entrada-saida.pdf",
+      },
+
+  {
+    number: "06",
     title: "Contratação de Carga",
     text: "Microsserviços robustos para contratação logística, com arquitetura limpa e cobertura de testes.",
     stack: "JAVA 17 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · SOLID · JUNIT ",
-  },
-  {
-    number: "09",
-    title: "Custo de Frota",
-    text: "Solução back-end para gestão de custos operacionais e manutenção de frotas.",
-    stack: "JAVA 21 · SPRING BOOT · POSTGRESQL · APIS RESTFUL · MICROSSERVIÇOS · DESIGN PATTERNS · JUNIT",
+    document: "/documents/contratacao-carga.pdf",
   },
 ];
 
@@ -119,7 +106,7 @@ const services = [
   {
     icon: Code2,
     title: "Frontend",
-    text: "Interfaces com React, TypeScript, JavaScript e Angular 15+, integradas às APIs e serviços de back-end.",
+    text: "Interfaces com React, TypeScript e JavaScript, integradas às APIs e serviços de back-end.",
   },
   {
     icon: FlaskConical,
@@ -154,11 +141,11 @@ const technologies = [
   { name: "React", detail: "Frontend", icon: Code2 },
   { name: "PostgreSQL", detail: "Dados", icon: Database },
   { name: "Docker", detail: "Containers", icon: Container },
-  { name: "Kubernetes", detail: "Orquestração", icon: Boxes },
+  { name: "Spec Driven Development", detail: "Inteligência Artificial", icon: Bot },
   { name: "Kafka", detail: "Eventos", icon: Workflow },
-  { name: "RabbitMQ", detail: "Mensageria", icon: Network },
+  { name: "Clean Code", detail: "Boas Práticas", icon: ChartNoAxesGantt },
   { name: "AWS & GCP", detail: "Cloud", icon: Cloud },
-  { name: "JavaScript", detail: "Web", icon: Braces },
+  { name: "TypeScript", detail: "Web", icon: Braces },
 ];
 
 export function Portfolio() {
@@ -460,10 +447,10 @@ export function Portfolio() {
       <section id="sobre" className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 md:grid-cols-[.42fr_1fr] md:px-10 md:py-36">
         <div><p className="section-label">SOBRE MIM</p></div>
         <div>
-          <h2 className="font-display max-w-5xl text-3xl font-bold leading-tight tracking-normal md:text-6xl">Analista Desenvolvedor de Software com visão do todo — da regra de negócio ao deploy.</h2>
+          <h2 className="font-display max-w-5xl text-3xl font-bold leading-tight tracking-normal md:text-6xl">Desenvolvedor de Software com visão do todo — da regra de negócio ao deploy.</h2>
           <div className="mt-10 grid gap-8 text-muted-foreground md:grid-cols-2">
             <p className="leading-relaxed">Sou profissional de TI com 6 anos de experiência, sendo mais de 3 anos atuando diretamente no desenvolvimento, evolução e sustentação de sistemas corporativos, com foco em soluções Full-Stack e na transformação de regras de negócio em aplicações estáveis e escaláveis. Tenho perfil orientado à análise e resolução de problemas complexos, desenvolvimento de soluções completas e aprendizado contínuo. Atualmente curso Análise e Desenvolvimento de Sistema pela FIAP.</p>
-            <p className="leading-relaxed">Atuo principalmente com Java e Spring no backend, além de React com JavaScript, TypeScript e Angular no frontend, desenvolvendo APIs RESTful, microsserviços e integrações. Também tenho experiência com sistemas legados, testes automatizados, Docker, mensageria e CI/CD, utilização de IA aplicada no desenvolvimento de software, sempre buscando equilibrar evolução técnica, qualidade de código e estabilidade das soluções.</p>
+            <p className="leading-relaxed">Atuo principalmente com Java e Spring no backend, além de React com JavaScript e TypeScript no frontend, desenvolvendo APIs RESTful, microsserviços e integrações. Também tenho experiência com sistemas legados, testes automatizados, Docker, mensageria e CI/CD, utilização de IA aplicada no desenvolvimento de software, sempre buscando equilibrar evolução técnica, qualidade de código e estabilidade das soluções.</p>
           </div>
         </div>
           </section>
@@ -556,7 +543,8 @@ export function Portfolio() {
           <p className="section-label">EXPERIÊNCIA</p>
           <div className="mt-12 divide-y divide-border border-t border-border">
             {[
-              ["2023 — PRESENTE", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
+              ["2026 — PRESENTE", "Software Developer", "Starian", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
+              ["2023 — 2026", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
               ["2023", "Analista de Suporte", "Alcafoods Ltda", "Windows · Linux · Active Directory · Infraestrutura"],
               ["2020 — 2023", "Assistente de T.I.", "Alcafoods Ltda", "Suporte · Redes · Equipamentos · CFTV"],
             ].map(([date, role, company, tech]) => (
