@@ -313,12 +313,6 @@ export function Portfolio() {
          "
        >
 
-         {/* Label */}
-         <p className="font-mono text-[10px] font-bold uppercase tracking-wide text-primary sm:text-xs">
-           Full-Stack&nbsp; · &nbsp;Produto&nbsp; · &nbsp;Web
-         </p>
-
-
          {/* Título */}
          <h2
            className="
@@ -543,7 +537,7 @@ export function Portfolio() {
           <p className="section-label">EXPERIÊNCIA</p>
           <div className="mt-12 divide-y divide-border border-t border-border">
             {[
-              ["2026 — PRESENTE", "Software Developer", "Starian", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
+              ["2026 — PRESENTE", "Software Developer", "Starian", "Java · Spring · React · TDD · IA ·"],
               ["2023 — 2026", "Analista Desenvolvedor de Sistema", "Alcafoods Ltda", "Java · Spring · React · TDD · Microsserviços · CI/CD · IA ·"],
               ["2023", "Analista de Suporte", "Alcafoods Ltda", "Windows · Linux · Active Directory · Infraestrutura"],
               ["2020 — 2023", "Assistente de T.I.", "Alcafoods Ltda", "Suporte · Redes · Equipamentos · CFTV"],
